@@ -77,9 +77,13 @@ To set up **MemriNeurons**, follow the steps below.
 
 The program is available on GitHub, but is currently in a **private repository**. Therefore:
 
-- **If you know how to use git and GitHub**, let me know your github username and I will add you to the repository as a collaborator. Then you will be able to clone the code.
+- **If you know how to use git and GitHub** clone the `main` branch to your PC <u>into the `MemriBoard` folder</u>:
 
-- **If you don't know how to use git and GitHub**, extract the `MemriNeurons.zip` archive into the `MemriBoard` folder.
+  ```bash
+  git clone git@github.com:neurocomputer/MemriNeurons.git
+  ```
+
+- **If you don't know how to use git and GitHub**, extract the `MemriNeurons.zip` archive <u>into the `MemriBoard` folder</u>.
 
 ### Project Structure
 
@@ -89,6 +93,6 @@ After extracting, make sure the project structure looks as shown in the figure b
 
 ### Running the Validation Script
 
-Copy the `check_memrineurons.py` script into the `MemriBoard` folder and run it.
+Copy the `check_memrineurons.py` script from the `MemriNeurons` folder into the `MemriBoard` folder and run it.
 
 **Success** means the script executes without errors, and a number close to **0.1** is printed to the terminal.
