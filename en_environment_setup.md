@@ -98,7 +98,7 @@ After extracting, make sure the project structure looks as shown in the figure b
 
 ### Running the Validation Script
 
-Copy the `check_memrineurons.py` script from the `MemriNeurons` folder into the `MemriBoard` folder and run it.
+Copy the [`check_memrineurons.py`](examples/check_memrineurons.py) script from the `examples` folder into the `MemriBoard` folder and run it.
 
 **Success** means the script executes without errors, and a number close to **0.1** is printed to the terminal.
 
@@ -107,10 +107,18 @@ Copy the `check_memrineurons.py` script from the `MemriNeurons` folder into the 
 Next, study the simplest examples of working with MemriNeurons:
 [`en_xor_examples.md`](en_xor_examples.md)
 
+Copy the [`xor_examples.py`](examples/xor_example.py) script and [`XOR.keras`](examples/XOR.keras) from the `examples` folder into the `MemriBoard` folder and run `xor_examples.py`.
+
 **Success** will be considered achieved if the script [`xor_examples.py`](examples/xor_example.py) runs without errors.
 
-### More information how MemriNeurons works
+### Detailed information how MemriNeurons works
 [https://github.com/neurocomputer/MemriNeurons/tree/main/docs](https://github.com/neurocomputer/MemriNeurons/tree/main/docs)
+
+[`master_class.ipynb`](examples/master_class.ipynb) shows how the simulator works.
+
+[`snn_example.ipynb`](examples/snn_example.ipynb) shows how to work with LIF-neurons and spiking neural networks.
+
+---
 
 ## 3. Educational Videos
 

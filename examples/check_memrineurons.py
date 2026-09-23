@@ -14,4 +14,4 @@ device = HardCore(CONN)
 
 # checking the functionality
 _ = device.write_weight(0, 0, 0.1)
-print(device.read_one_weight(0, 0))
+print(device.read_one_weight(0, 0)[0])
