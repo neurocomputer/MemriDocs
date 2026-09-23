@@ -19,12 +19,15 @@ The open platform project for working with memristive crossbar arrays is located
 In our work we use three main programs:
 
 1. **MemriBoard** — <https://github.com/neurocomputer/MemriBoard>
+
    A GUI application for memristor research, automated testing of crossbar arrays, and demonstration of RRAM and in-memory computing functionality. It also includes a simulator for memristors and for devices used to work with them.
 
 2. **MemriCore** — currently a closed repository.
+
    Contains drivers for connecting various memristor-based devices and for their investigation in MemriBoard. If you are interested in working with real memristors, please let us know.
 
 3. **MemriNeurons** — <https://github.com/neurocomputer/MemriNeurons>
+
    A framework for building neurons and neural networks on memristors and running them on our devices.
 
 ## 📁 Repository Structure

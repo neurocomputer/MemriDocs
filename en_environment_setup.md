@@ -12,6 +12,7 @@
   - [Accessing the Repository](#accessing-the-repository)
   - [Project Structure](#project-structure)
   - [Running the Validation Script](#running-the-validation-script)
+- [3. Educational Videos](#3-educational-videos)
 
 ---
 
@@ -26,7 +27,9 @@ To set up **MemriBoard**, follow the steps below.
   ```bash
   git clone git@github.com:neurocomputer/MemriBoard.git -b dev
   ```
-
+  ```bash
+  git clone https://github.com/neurocomputer/MemriBoard.git -b dev
+  ```
 - **If you don't know how to use git and GitHub**, extract the `MemriBoard.zip` archive.
 
 ### Virtual Environment and Dependencies
@@ -82,7 +85,9 @@ The program is available on GitHub, but is currently in a **private repository**
   ```bash
   git clone git@github.com:neurocomputer/MemriNeurons.git
   ```
-
+  ```bash
+  git clone https://github.com/neurocomputer/MemriNeurons.git
+  ```
 - **If you don't know how to use git and GitHub**, extract the `MemriNeurons.zip` archive <u>into the `MemriBoard` folder</u>.
 
 ### Project Structure
@@ -96,3 +101,16 @@ After extracting, make sure the project structure looks as shown in the figure b
 Copy the `check_memrineurons.py` script from the `MemriNeurons` folder into the `MemriBoard` folder and run it.
 
 **Success** means the script executes without errors, and a number close to **0.1** is printed to the terminal.
+
+### Verification and Success Criteria
+
+Next, study the simplest examples of working with MemriNeurons:
+[`en_xor_examples.md`](en_xor_examples.md)
+
+**Success** will be considered achieved if the script [`xor_examples.py`](examples/xor_example.py) runs without errors.
+
+### More information how MemriNeurons works
+[https://github.com/neurocomputer/MemriNeurons/tree/main/docs](https://github.com/neurocomputer/MemriNeurons/tree/main/docs)
+
+## 3. Educational Videos
+
