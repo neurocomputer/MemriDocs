@@ -50,4 +50,20 @@ write_verify_tuning/  - experiment plans for programming conductances
 
 Documentation for **MemriBoard** and **MemriNeurons** is provided inside those repositories. You can find links to it while reading `en_environment_setup.md`.
 
-# 🚀 Enjoy exploring memristors! 
+## 🎥 Video
+
+|#|Description|Link|
+|-|-|-|
+|1|How to use the documentation|[Watch](https://disk.yandex.ru/i/zSH8-vFfje5UkA)|
+|2|Environment setup|[Watch](https://disk.yandex.ru/i/L9obTbzNRVDmKw)|
+|3|Memristor model|[Watch](https://disk.yandex.ru/i/4hBXaMO3bPY4QA)|
+|4|Board simulator (mode_7, 9, mvm)|[Watch](https://disk.yandex.ru/i/oxjdxbnq5tepDA)|
+|5|Reading and recording weights|[Watch](https://disk.yandex.ru/i/vKOrxC5DK3tAtg)|
+|6|Multiplication and the dot product|[Watch](https://disk.yandex.ru/i/g9ZzDKtoI9Caog)|
+|7|Creating a simple neuron|[Watch](https://disk.yandex.ru/i/b6FRC41qtTIURg)|
+|8|Spiking neural networks|[Watch](https://disk.yandex.ru/i/v4yy50hzcfBupw)|
+|9|LIF neurons and STDP|[Watch](https://disk.yandex.ru/i/zhefTyarE4NmiA)|
+|10|Formal neural networks|[Watch](https://disk.yandex.ru/i/z5ZTtyi6XHFQyQ)|
+|11|Keras2nmp converter|[Watch](https://disk.yandex.ru/i/ezZ2HuKMqAULPg)|
+
+# 🚀 Enjoy exploring memristors!
