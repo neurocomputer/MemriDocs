@@ -125,7 +125,7 @@ if TEST_WEIGHT_RANGE: # weight dynamic range test
     plt.legend()
     plt.show()
     device.set_mvm()
-    weight_range = np.linspace(0, 0.05, 10)
+    weight_range = np.linspace(0, 0.07, 10)
     actual_weights = []
     for weight_value in weight_range:
         _ = device.write_weight(BL, WL, weight_value)
@@ -144,7 +144,6 @@ if TEST_CUSTOM_NEURON: # single neuron creation test
     print('\n'+50*'*')
     print('single neuron creation test')
     print(50*'*')
-
     w1 = np.random.uniform(-0.3, 0.3)
     w2 = np.random.uniform(-0.3, 0.3)
     x1 = np.random.uniform(-0.3, 0.3)
@@ -158,6 +157,41 @@ if TEST_CUSTOM_NEURON: # single neuron creation test
     print(f'Written values: w1={round(device.read_one_weight(0, 0)[0],2)} w2={round(device.read_one_weight(1, 0)[0],2)}')
     print(f'Reference result: {etalon_output}')
     print(f'Memristor result: {output}')
+    print(50*'-')
+    device.set_mvm()
+    relu = lambda x: 0 if x < 0 else x
+    # weight calc
+    w1_plus = np.random.uniform(0.003, 0.05)
+    w1_minus = np.random.uniform(0.003, 0.05)
+    w2_plus = np.random.uniform(0.003, 0.05)
+    w2_minus = np.random.uniform(0.003, 0.05)
+    w1 = w1_plus - w1_minus
+    w2 = w2_plus - w2_minus
+    print(f'Neuron parameters: x1={round(x1,2)}, x2={round(x2,2)}, w1={round(w1,2)} w2={round(w2,2)}')
+    device.write_weight(0, 0, w1_plus)
+    device.write_weight(0, 1, w1_minus)
+    device.write_weight(1, 0, w2_plus)
+    device.write_weight(1, 1, w2_minus)
+    w1_plus = device.read_one_weight(0, 0)[0]
+    w1_minus = device.read_one_weight(0, 1)[0]
+    w2_plus = device.read_one_weight(1, 0)[0]
+    w2_minus = device.read_one_weight(1, 1)[0]
+    w1 = w1_plus - w1_minus
+    w2 = w2_plus - w2_minus
+    print(f'Written values: w1={w1} w2={w2}')
+    X = np.zeros(shape=(32,))
+    X[0] = x1
+    X[1] = x2
+    W = np.zeros(shape=(32,))
+    W[0] = w1
+    W[1] = w2
+    etalon_output = relu(W @ X)
+    print(f'Reference result: {etalon_output}')
+    X_plus = X[X>0]
+    X_minus = abs(X[X<0])
+    output = relu(device.dot_product(X_plus, 0)[0] - device.dot_product(X_minus, 0)[0] - device.dot_product(X_plus, 1)[0] + device.dot_product(X_minus, 1)[0])
+    print(f'Memristor result: {output}')
+    device.set_wr()
 
 if TEST_ANN: # two-layer network assembled manually
     print('\n'+50*'*')
